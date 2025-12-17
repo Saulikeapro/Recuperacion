@@ -8,19 +8,25 @@ def regla_caminar(hechos):
         return "Caminar"
     return None
 
+def regla_caminar_mal_clima(hechos):
+    if hechos["distancia"] == "corta" and hechos["clima"] == "malo":
+        return "Autobus"
+    return None
+
+
 def regla_autobus(hechos):
-    if hechos["distancia"] == "media" and hechos["transporte_publico"]:
-        return "Autobús"
+    if hechos["distancia"] == "corta" and hechos["transporte_publico"] and hechos["clima"] == "malo":
+        return "Automovil"
     return None
 
 
 def regla_automovil(hechos):
     if hechos["distancia"] == "larga":
-        return "Automóvil"
+        return "Automovil"
     return None
 
 
-REGLAS = [regla_caminar, regla_autobus, regla_automovil]
+REGLAS = [regla_caminar, regla_autobus, regla_automovil,regla_caminar_mal_clima]
 
 # MOTOR DE INFERENCIA
 
@@ -42,7 +48,7 @@ def recomendar():
     regla, recomendacion = motor_inferencia(hechos)
 
     resultado_label.config(
-        text=f"Regla aplicada: {regla}\nRecomendación: {recomendacion}"
+        text=f"Regla aplicada: {regla}\nRecomendacion: {recomendacion}"
     )
 
 
