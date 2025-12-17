@@ -18,3 +18,12 @@ Puede utilizarse para saber que metodo de transopre es mejor suponiendo que vive
 -Compilar el codigo, como tkinter es la unica libreria que se utiliza solo requiere eso
 
 # Casos de prueba
+Distancia corta, clima bueno, sin transporte público
+<img width="366" height="402" alt="image" src="https://github.com/user-attachments/assets/12270da6-f7cc-42de-87d4-ceedce3642a7" />
+
+Distancia media, clima malo, con transporte público
+<img width="365" height="403" alt="image" src="https://github.com/user-attachments/assets/868a5bb8-2ca5-4a5b-a52b-cc1a5cbb50b7" />
+
+Distancia larga, cualquier clima
+<img width="369" height="403" alt="image" src="https://github.com/user-attachments/assets/bfe30d0d-33bf-4ba9-8ec0-32eb9ba4a91a" />
+
