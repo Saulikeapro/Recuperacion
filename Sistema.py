@@ -8,7 +8,6 @@ def regla_caminar(hechos):
         return "Caminar"
     return None
 
-
 def regla_autobus(hechos):
     if hechos["distancia"] == "media" and hechos["transporte_publico"]:
         return "Autobús"
@@ -40,10 +39,10 @@ def recomendar():
         "transporte_publico": transporte_var.get()
     }
 
-    _, recomendacion = motor_inferencia(hechos)
+    regla, recomendacion = motor_inferencia(hechos)
 
     resultado_label.config(
-        text=f"Recomendación: {recomendacion}"
+        text=f"Regla aplicada: {regla}\nRecomendación: {recomendacion}"
     )
 
 
@@ -94,7 +93,7 @@ tk.Button(
 resultado_label = tk.Label(
     ventana,
     text="",
-    font=("Arial", 15),
+    font=("Arial", 12),
     fg="Purple",
     justify="center"
 )
